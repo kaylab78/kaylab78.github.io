@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <title>Coding Cheat Sheet</title>
+</head>
+<body>
+  <h1>Coding Cheat Sheet</h1>
+
+  <h2>Starting an HTML and CSS Project</h2>
+
+  <h3>Set up your files and file structure</h3>
+  <ol>
+    <li>Create a new subfolder in your "projects" folder.</li>
+    <li>Name it the title of your project. (Use an underscore instead of a space, if necessary.)</li>
+    <li>Create a subfolder inside your new folder, and name it "resources."</li>
+    <li>Create a subfolder inside of "resources," and name it "css."</li>
+    <li>Open a new file in Visual Studio Code, and name it "index.html".</li>
+    <li>Open a new file in Visual Studio Code, and name it "style.css".</li>
+    <li>Copy and paste the following code to set up your HTML document:
+      <br>
+      <br><span>&lt!DOCTYPE html&gt;</span>
+      <br><span>&lt;html&gt;</span>
+      <br><span>&lt;head&gt;</span>
+      <br>&nbsp&nbsp<span>&lt;link href="./resources/css/style.css" type="text/css" rel="stylesheet"&gt;</span>
+      <br>&nbsp&nbsp<span>&lt;title&gt;Project Title&lt;/title&gt;</span>
+      <br><span>&lt;/head&gt;</span>
+      <br><span>&lt;body&gt;</span>
+      <br><span>&lt;/body&gt;</span>
+      <br><span>&lt;/html&gt;</span></li>
+    <br>
+    <li>Add any other metadata within the head tags.</li>
+    <li>Begin coding within the body tags.</li>
+  </ol>
+
+  <h2>General: HTML Tags, Attributes, and Keywords</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tag / Attribute / Keyword</th>
+        <th>Definition / Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span>& l t ;</span></td>
+        <td>In order to show HTML tags as text, use these symbols together to represent <span>&lt;</span>. Remember it as "less-than."</td>
+      </tr>
+      <tr>
+        <td><span>& g t ;</span></td>
+        <td>In order to show HTML tags as text, use these symbols together to represent <span>&gt;</span>. Remember it as "greater-than."</td>
+      </tr>
+      <tr>
+        <td><span>& n b s p ;</span></td>
+        <td>Use these symbols together to insert extra space on the same line. Remember it as "no break space."</td>
+      </tr>
+      <tr>
+        <td><span>&lt;a&gt;&lt;/a&gt;</span></td>
+        <td>Anchor element, links to other webpages.<br>
+Example on linking text: <span>&lt;a href="https://website.com"&gt;Text&lt;/a&gt;</span><br>
+Example on linking an image: <span>&lt;a href="https://website.com"&gt;&lt;img src="photo.jpg /&gt;&lt;/a&gt;</span><br>
+Example on linking to the same page using a target: <span>&lt;p id="top"&gt;Text&lt;/p&gt;</span> &nbsp; <span>&lt;a href="#top"&gt;Top of page&lt;/a&gt;</span></td>
+      </tr>
+      <tr>
+        <td>Absolute Path</td>
+        <td>Full URL stored in a different folder.</td>
+      </tr>
+      <tr>
+        <td><span>alt</span></td>
+        <td>Alt attribute, alternative text, metadata, description of the image, etc.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;article&gt;&lt;/article&gt;</span></td>
+        <td>Content that makes sense on its own.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;aside&gt;&lt;/aside&gt;</span></td>
+        <td>Mark additional information that can enhance another element but isn't required in order to understand the main content (bibliography, endnotes, comments, pullquotes, editorial sidebars, additional info)</td>
+      </tr>
+      <tr>
+        <td>Attribute</td>
+        <td>Content added to the opening tage of an element; used in different ways from providing info to changing styling. Ex: <span>&lt;div id="info"&gt;&lt;/div&gt;</span></td>
+      </tr>
+      <tr>
+        <td><span>&lt;audio&gt;&lt;/audio&gt;</span></td>
+        <td>Embeds audio.<br>
+        <span>&lt;audio&gt;</span><br>
+        &nbsp;<span>&lt;source src=""link"" type=""audio/mp3""&gt;</span><br>
+        <span>&lt;/audio&gt;</span></td>
+      </tr>
+      <tr>
+        <td><span>&lt;body&gt;&lt;/body&gt;</span></td>
+        <td>Content inside the body tags is the only content that will appear on the screen.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;br&gt;</span></td>
+        <td>Line break (Only a starting tag)</td>
+      </tr>
+      <tr>
+        <td><span>&lt;!-- Comment --&gt;</span></td>
+        <td>Characters inbetween these symbols are ignored by browser. Comments are helpful to understand code later, and they allow you to experiment with new code without deleting old code.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;div&gt;&lt;/div&gt;</span></td>
+        <td>Division / A container that divides the page into sections. Useful for grouping together elements in HTML.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;!DOCTYPE html&gt;</span></td>
+        <td>Document type declaration</td>
+      </tr>
+      <tr>
+        <td><span>&lt;em&gt;&lt;/em&gt;</span></td>
+        <td>Styles text as italic.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;embed&gt;</span></td>
+        <td>Self-closing tag. Embed any media content, can use local files or a link from another website.</td>
+      </tr>
+      <tr>
+        <td>Family Tree</td>
+        <td>In HTML structure, an element inside another element is the "child" element nested inside the "parent" element. HTML hierarchy is important because child elements can inherit behavior and styling from their parent element.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;figcaption&gt;&lt;/figcaption&gt;</span></td>
+        <td>Caption, describes media. Goes inside <span>&lt;figure&gt;</span> and moves with <span>&lt;figure&gt;</span>.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;figure&gt;&lt;/figure&gt;</span></td>
+        <td>Used to encapsulate media such as an image, illustration, etc. Referenced in the main flow of the document.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;footer&gt;&lt;/footer&gt;</span></td>
+        <td>Bottom of content (contact, copyright, terms, site, etc.) </td>
+      </tr>
+      <tr>
+        <td><span>&lt;h1&gt;&lt;/h1&gt;</span></td>
+        <td>Main heading</td>
+      </tr>
+      <tr>
+        <td><span>&lt;h2&gt;</span> - <span>&lt;h6&gt;</span></td>
+        <td>Subheadings that diminish in size the greater the number. (Opening and closing tags)</td>
+      </tr>
+      <tr>
+        <td><span>&lt;head&gt;&lt;/head&gt;</span></td>
+        <td>Contains metadata of a webpage.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;header&gt;&lt;/header&gt;</span></td>
+        <td>Container for navigational links or introductory content containing <span>&lt;h1&gt;</span> to <span>&lt;h6&gt; tags.</span></td>
+      </tr>
+      <tr>
+        <td><span>href</span></td>
+        <td>Hyperlink reference (see <span>&lt;a&gt;&lt;/a&gt;</span>)</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Hypertext Markup Language</td>
+      </tr>
+      <tr>
+        <td><span>&lt;html&gt;&lt;/html&gt;</span></td>
+        <td>HTML structure after doctype</td>
+      </tr>
+      <tr>
+        <td><span>&lt;img&gt;</span></td>
+        <td>Image, self-closing tag. Ex: <span>&lt;img src="image-location.jpg" /&gt;</span></td>
+      </tr>
+      <tr>
+        <td>Indentation</td>
+        <td>Use space and tab to easily visualize which elements are nested within other elements. (2 spaces of indentation)</td>
+      </tr>
+      <tr>
+        <td><span>&lt;li&gt;&lt;/li&gt;</span></td>
+        <td>List items, use within an unordered or ordered list.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;main&gt;&lt;/main&gt;</span></td>
+        <td>Encapsulates dominant content. Screen readers identify stuff in this tag as the bulk of the content.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;nav&gt;&lt;/nav&gt;</span></td>
+        <td>Defines a block of navigation links (menus, ToC). Can be used inside header or on its own.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;ol&gt;&lt;/ol&gt;</span></td>
+        <td>Ordered list, numbered items	</td>
+      </tr>
+      <tr>
+        <td><span>&lt;p&gt;&lt;/p&gt;</span></td>
+        <td>Paragraphs contain a block of plain text.</td>
+      </tr>
+      <tr>
+        <td>Relative Path</td>
+        <td>Filename that shows the path to a local file.</td>
+      </tr>
+      <tr>
+        <td>Root Directory</td>
+        <td>Main folder where all files for the project are stored.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;section&gt;&lt;/section&gt;</span></td>
+        <td>Inside body and defines areas with the same theme (chapters, headings, etc.)</td>
+      </tr>
+      <tr>
+        <td><span>&lt;span&gt;&lt;/span&gt;</span></td>
+        <td>Contains short pieces of text or other HTML; used to separate small pieces of content that are on the same line as other content.</td>
+      </tr>
+      <tr>
+        <td><span>src</span></td>
+        <td>Source attribute, location of a media file</td>
+      </tr>
+      <tr>
+        <td><span>&lt;strong&gt;&lt;/strong&gt;</span></td>
+        <td>Styles text as bold.</td>
+      </tr>
+      <tr>
+        <td><span>target</span></td>
+        <td>Target attribute specifies how a link opens.
+        <br>Example on opening a new window: <span>&lt;a href="https://website.com" target="_blank"&gt;Text&lt;/a&gt;</span></td>
+      </tr>
+      <tr>
+        <td><span>&lt;title&gt;&lt;/title&gt;</span></td>
+        <td>Page title is displayed on a browser tab.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;ul&gt;&lt;/ul&gt;</span></td>
+        <td>Unordered list, bullet points</td>
+      </tr>
+      <tr>
+        <td><span>&lt;video&gt;&lt;/video&gt;</span></td>
+        <td>Video tags.<br>
+Ex: <span>&lt;video src="video.mp4" width="320" height="240" controls&gt;Video not supported&lt;/video&gt;</span></td>
+      </tr>
+      <tr>
+        <td>Whitespace</td>
+        <td>A tool used to make code easier to read and follow. Put elements on their own lines.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h2>Tables: HTML Tags, and Attributes</h2>
+
+  <table>
+    <thead>
+      <tr>
+         <th>Tag / Attribute </th>
+         <th>Defintion / Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span>colspan</span></td>
+        <td>Spanning columns attribute, tells us how many columns (cells) a table data element encompases.</td>
+      </tr>
+      <tr>
+        <td><span>rowspan</span></td>
+        <td>Spanning rows attribute, tells us how many rows a table data element encompases.</td>
+      </tr>
+      <tr>
+        <td><span>scope</span></td>
+        <td>Scope attribute declares a heading for a row or column within a <span>&lt;th&gt;</span>.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;table&gt;&lt;/table&gt;</span></td>
+        <td>Encloses an entire table.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;tbody&gt;&lt;/tbody&gt;</span></td>
+        <td>Should contain all of the table's data excluding the table headings.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;td&gt;&lt;/td&gt;</span></td>
+        <td>Table data element. Each <span>&lt;td&gt;</span> is a cell and creates columns within a <span>&lt;tr&gt;</span></td>
+      </tr>
+      <tr>
+        <td><span>&lt;tfoot&gt;&lt;/tfoot&gt;</span></td>
+        <td>Table footer, bottom part of a long table (Ex: totals, sums, differences, etc.)</td>
+      </tr>
+      <tr>
+        <td><span>&lt;th&gt;&lt;/th&gt;</span></td>
+        <td>Table heading, a title for a row and placed within a table row</td>
+      </tr>
+      <tr>
+        <td><span>&lt;thead&gt;&lt;/thead&gt;</span></td>
+        <td>Table heading contained inside this element for both columns and rows.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;tr&gt;&lt;/tr&gt;</span></td>
+        <td>Table rows</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Forms: HTML Tags, Attributes, and Keywords</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tag / Attribute / Keyword</th>
+        <th>Definition / Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span>action</span></td>
+        <td>Where <span>&lt;form&gt;</span> information is sent</td>
+      </tr>
+      <tr>
+        <td>Client-side Validation</td>
+        <td>Check data on the browser, occurs before data is sent to the server</td>
+      </tr>
+      <tr>
+        <td><span>&lt;form&gt;&lt;/form&gt;</span></td>
+        <td>Requires the location of where the info goes and what HTTP request to make.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;form&gt;</span><br>
+&nbsp<span>&lt;label for="text"&gt;Dropdown&lt;/label&gt;</span><br>
+&nbsp<span>&lt;select id="text" name="text"&gt;</span><br>
+&nbsp&nbsp<span>&lt;option value="text"&gt;Text&lt;/option&gt;</span><br>
+&nbsp<span>&lt;/select&gt;</span><br>
+<span>&lt;/form&gt;</span></td>
+        <td>Dropdown List</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input pattern="[0,9] {14,16}"&gt;</span></td>
+        <td>Regular Expression (regex), a sequence of characters that make up a search pattern.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input required&gt;</span></td>
+        <td>Requiring an input</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="checkbox"&gt;</span></td>
+        <td>Checkbox input, need individual inputs for each checkbox.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="number"&gt;</span></td>
+        <td>Number input</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="number" min="1" max="100"&gt;</span></td>
+        <td>Setting a minimum and maximum for a number or range type.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="password"&gt;</span></td>
+        <td>Password input</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="radio"&gt;</span></td>
+        <td>Radio button input, only one can be selected.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="range"&gt;</span></td>
+        <td>Range input (slider). Ex: <span>&lt;input type="range" min="0" max="100" step="10"&gt;</span></td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="submit" value="send"&gt;</span></td>
+        <td>Submit form</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="text"&gt;</span></td>
+        <td>Form text input, type determines how the data is rendered on the webpage and what data the input field accepts.</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="text" minlength="5" maxlength="40"&gt;</span></td>
+        <td>Checking text length with a minimum and maximum number of characters</td>
+      </tr>
+      <tr>
+        <td><span>&lt;input type="text"&gt;</span><br>
+<span>&lt;datalist id="text"&gt;</span><br>
+&nbsp<span>&lt;option value="text"&gt;&lt;/option&gt;</span><br>
+<span>&lt;/datalist&gt;</span></td>
+        <td>Datalist input</td>
+      </tr>
+      <tr>
+        <td><span>&lt;label&gt;&lt;/label&gt;</span></td>
+        <td>Used to label an <span>&lt;input&gt;</span> element. To associate with an <span>&lt;input&gt;</span>, use an <span>id</span> attribute</td>
+      </tr>
+      <tr>
+        <td><span>method</span></td>
+        <td>Assigned an HTTP verb included in the HTTP request, see <span>&lt;form&gt;</span>.</td>
+      </tr>
+      <tr>
+        <td>Server-side Validation</td>
+        <td>When data is sent to another machine for validation</td>
+      </tr>
+      <tr>
+        <td><span>&lt;textarea&gt;&lt;/textarea&gt;</span></td>
+        <td>Textarea element, bigger text field. Text between the opening and closing tags will be pre-filled text.</td>
+      </tr>
+      <tr>
+        <td>Validation</td>
+        <td>Concept of checking user provided data against required data.</td>
+      </tr>
+      <tr>
+        <td><span>value</span></td>
+        <td>Can use a value attribute to pre-fill a form. Otherwise, whatever is typed into the <span>input</span> element becomes the <span>value</span> attribute.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Codecademy Cheatsheets</h2>
+  <ul>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/learn-html-web-dev-path/modules/learn-html-elements/cheatsheet">HTML: Elements and Structure</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/learn-html-web-dev-path/modules/learn-html-tables/cheatsheet">HTML: Tables</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/learn-html-web-dev-path/modules/learn-html-forms/cheatsheet">HTML: Forms</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/learn-html-web-dev-path/modules/learn-semantic-html/cheatsheet">Semantic HTML</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/styling-a-website/modules/learn-css-selectors-visual-rules/cheatsheet">CSS: Selectors and Visual Rules</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-more-advanced-with-design/modules/learn-css-box-model/cheatsheet">CSS: The Box Model</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-more-advanced-with-design/modules/learn-css-display-positioning/cheatsheet">CSS: Display and Positioning</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-more-advanced-with-design/modules/learn-css-colors/cheatsheet">CSS: Colors</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-more-advanced-with-design/modules/learn-css-typography/cheatsheet">CSS: Typography</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-started-with-javascript/modules/learn-javascript-introduction/cheatsheet">JavaScript: Introduction</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-started-with-javascript/modules/learn-javascript-control-flow/cheatsheet">JavaScript: Conditionals</a></li>
+    <li><a href="https://www.codecademy.com/learn/paths/web-development/tracks/getting-started-with-javascript/modules/learn-javascript-functions/cheatsheet">JavaScript: Functions</a></li>
+  </ul>
+
+<p><strong>For reference:</strong> 
+  <br>Check out <a href="https://www.codecademy.com/practice/projects/independent-project-html-documentation">this project</a> on Codecademy.
+  <br>Codecademy's <a href="https://s3.amazonaws.com/codecademy-content/PRO/independent-practice-projects/html-css-cheat-sheet/example/index.html">solution</a> to this exercise.
+</p>
+
+</body>
+</html>
